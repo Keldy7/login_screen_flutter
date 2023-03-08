@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:project1/screens/welcome_screen.dart';
 import '../components/rond_bas.dart';
 import '../components/rond_haut.dart';
 
@@ -17,8 +16,9 @@ class _LaunchScreenState extends State<LaunchScreen> {
     super.initState();
     Timer(
       const Duration(seconds: 2),
-      () => Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const WelcomeScreen())));
+      () => Navigator.pushReplacementNamed(
+        context, '/lib/screens/welcome_screen.dart'),
+    );
   }
 
   @override
@@ -32,7 +32,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
           height: size.height,
           width: size.width,
           decoration:
-              const BoxDecoration(color: Color.fromARGB(255, 247, 162, 4)),
+            const BoxDecoration(color: Color.fromARGB(255, 254, 172, 22)),
         ),
       ),
       SizedBox(
@@ -54,7 +54,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
           height: size.height,
           width: size.width,
           decoration:
-              const BoxDecoration(color: Color.fromARGB(255, 247, 162, 4)),
+            const BoxDecoration(color: Color.fromARGB(255, 254, 172, 22)),
         ),
       ),
     ]));
