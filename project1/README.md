@@ -1,16 +1,10 @@
-# project1
+# Interfaces of the application to be realized
+<br/>
 
-A new Flutter project.
+## Project 1 (Realized)
 
-## Getting Started
+![Application Project 1](https://user-images.githubusercontent.com/93558050/224173973-20c18f9e-2d1c-464b-b009-bdd96f1167f3.jpeg)
 
-This project is a starting point for a Flutter application.
+## Project 2 (Not yet realized)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Application Project 2](https://user-images.githubusercontent.com/93558050/224175072-12fe0c77-19bb-4f8e-8d84-795bf75ab385.jpeg)
