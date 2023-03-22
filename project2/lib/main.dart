@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project2/screens/home_screen.dart';
 import 'package:project2/screens/welcome_screen.dart';
 
 void main() {
@@ -23,7 +24,10 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const WelcomeScreen()
+      home: const HomeScreen(),
+      routes: {
+        "/lib/screens/home_screen.dart" : (_) => const HomeScreen()
+      },
     );
   }
 }
