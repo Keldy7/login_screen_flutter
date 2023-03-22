@@ -29,9 +29,7 @@ class WelcomeScreen extends StatelessWidget {
           Text(
             "Healthy     ",
             style: GoogleFonts.robotoSerif(
-                fontSize: 40,
-                fontWeight: FontWeight.w600,
-                color: Colors.black),
+                fontSize: 40, fontWeight: FontWeight.w600, color: Colors.black),
           ),
           SizedBox(height: height * .675),
           Row(
@@ -45,7 +43,7 @@ class WelcomeScreen extends StatelessWidget {
                   fixedSize: const Size(350, 55),
                   backgroundColor: const Color.fromARGB(255, 63, 63, 63),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
+                      borderRadius: BorderRadius.circular(12)),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
