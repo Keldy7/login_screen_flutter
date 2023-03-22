@@ -11,58 +11,57 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(children: [
-          Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20),
-              child: Column(
-                children: [
-                  Text(
-                    "Keep your          ",
-                    style: GoogleFonts.ibmPlexSerif(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300,
-                        color: const Color.fromARGB(255, 109, 107, 107)),
-                  ),
-                  Text(
-                    "mind                    ",
-                    style: GoogleFonts.ibmPlexSerif(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300,
-                        color: const Color.fromARGB(255, 109, 107, 107)),
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    "Healthy       ",
-                    style: GoogleFonts.robotoSerif(
-                        fontSize: 35,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
-                  ),
-                ],
-              )),
-          SizedBox(height: height * .65),
-          ElevatedButton(
-            onPressed: () async {
-              print(height);
-            },
-            style: ElevatedButton.styleFrom(
-              fixedSize: const Size(250, 50),
-              backgroundColor: const Color.fromARGB(255, 63, 63, 63),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12)),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Get started   ",
-                  style: GoogleFonts.ibmPlexSerif(
-                      color: const Color(0xFFFFFFFF),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 17),
+          Text(
+            "Keep your          ",
+            style: GoogleFonts.ibmPlexSerif(
+                fontSize: 30,
+                fontWeight: FontWeight.w300,
+                color: const Color.fromARGB(255, 109, 107, 107)),
+          ),
+          Text(
+            "mind                    ",
+            style: GoogleFonts.ibmPlexSerif(
+                fontSize: 30,
+                fontWeight: FontWeight.w300,
+                color: const Color.fromARGB(255, 109, 107, 107)),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            "Healthy     ",
+            style: GoogleFonts.robotoSerif(
+                fontSize: 40,
+                fontWeight: FontWeight.w600,
+                color: Colors.black),
+          ),
+          SizedBox(height: height * .675),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () async {
+                  print(height);
+                },
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(350, 55),
+                  backgroundColor: const Color.fromARGB(255, 63, 63, 63),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12)),
                 ),
-                const Icon(Icons.arrow_forward_outlined)
-              ],
-            ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(
+                      "Get started",
+                      style: GoogleFonts.ibmPlexSerif(
+                          color: const Color(0xFFFFFFFF),
+                          fontWeight: FontWeight.w300,
+                          fontSize: 20),
+                    ),
+                    const Icon(Icons.arrow_forward_outlined)
+                  ],
+                ),
+              ),
+            ],
           )
         ]),
       ),
