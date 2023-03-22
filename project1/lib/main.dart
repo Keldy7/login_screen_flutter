@@ -29,8 +29,7 @@ class MyApp extends StatelessWidget {
       home: const LaunchScreen(),
       routes: {
         "/lib/screens/welcome_screen.dart" : (_) => const WelcomeScreen(),
-        "/lib/screens/login_screen.dart" : (_) => const SignInScreen(),
-        
+        "/lib/screens/login_screen.dart" : (_) => const SignInScreen()
       },
     );
   }
