@@ -1,24 +1,34 @@
-class Vin {
-  final String nom;
+class SelfData {
+  final String titre;
   final String image;
-  final String prix;
+  final String temps;
 
-  Vin({
-    required this.nom,
+  SelfData({
+    required this.titre,
     required this.image,
-    required this.prix,
+    required this.temps,
   });
 }
-List<Vin> Vins = [
-    Vin(
-        nom: "Domaine Carneros Le Reve",
-        image: "assets/vin6.png",
-        prix: "109,99"),
-    Vin(
-        nom: "Bellavista Rose Franciacorta",
-        image: "assets/vin2.png",
-        prix: "44,99"),
-    Vin(nom: "L'Ermitage Brut Rose", image: "assets/vin5.png", prix: "149"),
-    Vin(nom: "Valpierre", image: "assets/vin3.png", prix: "149,99"),
-    Vin(nom: "RLG", image: "assets/vin4.png", prix: "109,98"),
-  ];
+
+List<SelfData> infos = [
+  SelfData(
+    titre: "Go out for a walk               & explore",
+    image: "assets/img2.png",
+    temps: "30"),
+  SelfData(
+    titre: "Explore new            activities",
+    image: "assets/img3.png",
+    temps: "45"),
+  SelfData(
+    titre: "Work on a passion project",
+    image: "assets/img4.png",
+    temps: "30"),
+  SelfData(
+    titre: "Take a break or read",
+    image: "assets/img3.png",
+    temps: "25"),
+  SelfData(
+    titre: "Aude la dev frontend mobile",
+    image: "assets/img4.png", 
+    temps: "20"),
+];
