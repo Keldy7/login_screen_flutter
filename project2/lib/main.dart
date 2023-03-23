@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:project2/screens/home_screen.dart';
 import 'package:project2/screens/welcome_screen.dart';
 
+import 'screens/details_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: const DetailScreen(),
       routes: {
         "/lib/screens/home_screen.dart" : (_) => const HomeScreen()
       },
