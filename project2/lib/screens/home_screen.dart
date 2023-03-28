@@ -12,12 +12,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: NavigBar(),
+      appBar: navigBar(),
       body: const ContenuWidget(),
     );
   }
 
-  AppBar NavigBar() {
+  AppBar navigBar() {
     return AppBar(
         title: const Text(""),
         elevation: 0.0,
@@ -158,6 +158,10 @@ class ContenuWidget extends StatelessWidget {
     );
   }
 }
+
+
+
+
 
 class SelfData {
   final String titre;
