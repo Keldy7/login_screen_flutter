@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../models/activities.dart';
+import 'details_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -82,7 +85,7 @@ class ContenuWidget extends StatelessWidget {
                 const SizedBox(height: 30),
                 ListView.builder(
                   shrinkWrap: true,
-                  itemCount: infos.length,
+                  itemCount: activity.length,
                   itemBuilder: (ctx, i) => Padding(
                     padding: const EdgeInsets.only(bottom: 25),
                     child: Container(
@@ -103,7 +106,7 @@ class ContenuWidget extends StatelessWidget {
                                   SizedBox(
                                     width: 220,
                                     child: Text(
-                                      infos[i].titre,
+                                      activity[i].titre,
                                       style: GoogleFonts.robotoSerif(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w600,
@@ -112,7 +115,7 @@ class ContenuWidget extends StatelessWidget {
                                   ),
                                   const SizedBox(height: 10),
                                   Text(
-                                    "${infos[i].temps} mins",
+                                    "${activity[i].temps} mins",
                                     style: GoogleFonts.robotoSerif(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w400,
@@ -125,11 +128,22 @@ class ContenuWidget extends StatelessWidget {
                                           color: Colors.black,
                                           borderRadius:
                                               BorderRadius.circular(18)),
-                                      child: Text(
-                                        " > ",
-                                        style: GoogleFonts.robotoSerif(
-                                          fontSize: 18,
-                                          color: Colors.white,
+                                      child: TextButton(
+                                        onPressed: () {
+                                          Navigator.pushReplacement(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: ((context) =>
+                                                      DetailScreen(
+                                                          popularActivityData:
+                                                              activity[i]))));
+                                        },
+                                        child: Text(
+                                          " > ",
+                                          style: GoogleFonts.robotoSerif(
+                                            fontSize: 18,
+                                            color: Colors.white,
+                                          ),
                                         ),
                                       )),
                                 ],
@@ -143,7 +157,8 @@ class ContenuWidget extends StatelessWidget {
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   fit: BoxFit.cover,
-                                  image: AssetImage(infos[i].image)),
+                                  image: AssetImage(
+                                      "assets/img${activity[i].image}.png")),
                               borderRadius: const BorderRadius.only(
                                   topRight: Radius.circular(20),
                                   bottomRight: Radius.circular(20))),
@@ -158,42 +173,3 @@ class ContenuWidget extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-class SelfData {
-  final String titre;
-  final String image;
-  final String temps;
-
-  SelfData({
-    required this.titre,
-    required this.image,
-    required this.temps,
-  });
-}
-
-List<SelfData> infos = [
-  SelfData(
-    titre: "Go out for a walk               & explore",
-    image: "assets/img2.png",
-    temps: "30"),
-  SelfData(
-    titre: "Explore new            activities",
-    image: "assets/img3.png",
-    temps: "45"),
-  SelfData(
-    titre: "Work on a passion project",
-    image: "assets/img4.png",
-    temps: "30"),
-  SelfData(
-    titre: "Take a break or read",
-    image: "assets/img3.png",
-    temps: "25"),
-  SelfData(
-    titre: "Aude la dev frontend mobile",
-    image: "assets/img4.png", 
-    temps: "20"),
-];

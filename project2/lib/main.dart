@@ -26,9 +26,10 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const DetailScreen(),
+      home: const WelcomeScreen(),
       routes: {
-        "/lib/screens/home_screen.dart" : (_) => const HomeScreen()
+        "/lib/screens/home_screen.dart" : (_) => const HomeScreen(),
+
       },
     );
   }
